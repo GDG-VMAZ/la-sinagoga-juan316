@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Sinagoga Juan 3:16 | Iglesia Pentecostal en Brooklyn NY</title>
+  <meta name="description" content="Iglesia pentecostal hispana en East New York, Brooklyn. Servicios en español todos los domingos. Pastoreada por Angel Diaz. Todos son bienvenidos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald:       #1A4D3A;
+      --emerald-dark:  #0F2D22;
+      --emerald-mid:   #25634A;
+      --emerald-light: #2D7A5A;
+      --gold:          #C9993F;
+      --gold-light:    #E0B86A;
+      --gold-pale:     #F5DFA0;
+      --brown:         #7A5235;
+      --brown-mid:     #A07248;
+      --brown-light:   #C4956A;
+      --brown-pale:    #D9B896;
+      --cream:         #F7F0E3;
+      --cream-dark:    #EDE3D0;
+      --cream-deep:    #E2D5BE;
+      --charcoal:      #1A1A1A;
+      --warm-gray:     #6B5E4E;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Nunito', sans-serif; color: var(--charcoal); background: var(--cream); }
+    h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream-dark); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(15, 45, 34, 0.97);
+      backdrop-filter: blur(12px);
+      padding: 18px 52px;
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid rgba(201,153,63,0.25);
+    }
+    .nav-logo { color: white; font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 600; line-height: 1.2; letter-spacing: 0.3px; }
+    .nav-logo span { display: block; color: var(--gold); font-size: 11px; font-family: 'Nunito', sans-serif; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; margin-top: 3px; }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.78); text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; transition: color 0.2s; text-transform: uppercase; }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .btn-gold {
+      background: var(--gold); color: var(--emerald-dark);
+      padding: 12px 26px; border: none; border-radius: 3px;
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: background 0.2s, transform 0.15s; letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-outline-gold {
+      background: transparent; color: var(--gold);
+      padding: 12px 26px; border: 1.5px solid var(--gold); border-radius: 3px;
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 13px;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: all 0.2s; letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .btn-outline-gold:hover { background: var(--gold); color: var(--emerald-dark); }
+
+    .btn-outline-white {
+      background: transparent; color: rgba(255,255,255,0.85);
+      padding: 12px 26px; border: 1.5px solid rgba(255,255,255,0.45); border-radius: 3px;
+      font-family: 'Nunito', sans-serif; font-weight: 600; font-size: 13px;
+      cursor: pointer; text-decoration: none; display: inline-block;
+      transition: all 0.2s; letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .btn-outline-white:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background:
+        linear-gradient(160deg, rgba(10,28,20,0.92) 0%, rgba(26,77,58,0.80) 55%, rgba(15,45,34,0.88) 100%),
+        url('https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=1600&q=80') center/cover no-repeat;
+      display: flex; align-items: center;
+      padding: 150px 52px 100px;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(201,153,63,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-ornament {
+      position: absolute; top: 80px; right: 52px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 240px; font-weight: 700; line-height: 1;
+      color: rgba(201,153,63,0.06); pointer-events: none;
+      letter-spacing: -5px;
+    }
+    .hero-content { max-width: 680px; position: relative; z-index: 1; }
+    .eyebrow {
+      color: var(--gold); font-size: 11px; font-family: 'Nunito', sans-serif;
+      font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+      margin-bottom: 24px; display: flex; align-items: center; gap: 14px;
+    }
+    .eyebrow-line { display: inline-block; width: 44px; height: 1px; background: var(--gold); }
+    .hero h1 {
+      color: white; font-size: clamp(50px, 6.5vw, 82px);
+      font-weight: 600; line-height: 1.06; margin-bottom: 28px;
+      font-style: italic; letter-spacing: -0.5px;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold-light); }
+    .hero p { color: rgba(255,255,255,0.78); font-size: 17px; line-height: 1.8; margin-bottom: 48px; max-width: 560px; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero .btn-gold { font-size: 14px; padding: 17px 38px; }
+    .hero .btn-outline-white { font-size: 13px; padding: 15px 34px; }
+    .hero-verse {
+      position: absolute; bottom: 44px; right: 52px;
+      color: rgba(255,255,255,0.3); font-family: 'Cormorant Garamond', serif;
+      font-size: 15px; font-style: italic; letter-spacing: 1px;
+    }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      background: var(--brown);
+      padding: 20px 52px;
+      display: flex; justify-content: center; align-items: center; flex-wrap: wrap;
+      border-bottom: 1px solid rgba(201,153,63,0.3);
+    }
+    .trust-item {
+      color: rgba(255,255,255,0.88); font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 6px 28px; display: flex; align-items: center; gap: 9px;
+      border-right: 1px solid rgba(201,153,63,0.35);
+    }
+    .trust-item:last-child { border-right: none; }
+    .trust-item::before { content: '✦'; color: var(--gold-light); font-size: 8px; }
+
+    /* SECTION HELPERS */
+    .section-wrap { max-width: 1200px; margin: 0 auto; padding: 108px 52px; }
+    .section-label {
+      color: var(--gold); font-size: 11px; font-weight: 700;
+      letter-spacing: 3.5px; text-transform: uppercase;
+      margin-bottom: 14px; display: flex; align-items: center; gap: 12px;
+    }
+    .section-label::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--gold); }
+    .section-heading {
+      font-size: clamp(34px, 4.5vw, 56px); font-weight: 600;
+      color: var(--emerald-dark); line-height: 1.12; margin-bottom: 18px;
+      letter-spacing: -0.3px;
+    }
+    .section-heading-light { color: white; }
+    .section-heading-brown { color: var(--brown); }
+    .section-sub { font-size: 17px; color: var(--warm-gray); line-height: 1.78; max-width: 620px; margin-bottom: 52px; }
+    .gold-ornament {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 36px;
+    }
+    .gold-ornament::before, .gold-ornament::after { content: ''; flex: 0 0 48px; height: 1px; background: var(--gold); }
+    .gold-ornament span { color: var(--gold); font-size: 12px; letter-spacing: 1px; }
+
+    /* ABOUT */
+    .about-bg { background: var(--cream); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .two-col-rev { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center; }
+    .about-text p { font-size: 16px; color: #4A3E30; line-height: 1.88; margin-bottom: 22px; }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img { width: 100%; height: 500px; object-fit: cover; border-radius: 4px; display: block; }
+    .about-img-wrap::after {
+      content: ''; position: absolute; bottom: -20px; right: -20px;
+      width: 72%; height: 72%; border: 2px solid var(--gold); border-radius: 4px; z-index: -1;
+    }
+    .about-img-wrap::before {
+      content: 'Jn 3:16'; position: absolute; top: -16px; left: -16px;
+      color: var(--emerald); font-family: 'Cormorant Garamond', serif;
+      font-size: 13px; font-style: italic; letter-spacing: 2px;
+      background: var(--gold-pale); padding: 6px 14px; border-radius: 2px;
+      z-index: 2; font-weight: 600;
+    }
+
+    /* PROBLEM / SOLUTION */
+    .ps-bg { background: var(--emerald-dark); }
+    .ps-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 56px; }
+    .ps-card { padding: 48px; border-radius: 4px; }
+    .ps-card.problem {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .ps-card.solution {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--brown-mid) 100%);
+    }
+    .ps-card h3 { font-size: 26px; margin-bottom: 16px; font-weight: 600; font-style: italic; }
+    .ps-card.problem h3 { color: rgba(255,255,255,0.88); }
+    .ps-card.solution h3 { color: var(--emerald-dark); }
+    .ps-card p { font-size: 16px; line-height: 1.78; }
+    .ps-card.problem p { color: rgba(255,255,255,0.68); }
+    .ps-card.solution p { color: var(--emerald-dark); }
+
+    /* MINISTRIES */
+    .ministry-bg { background: var(--cream-dark); }
+    .ministry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .ministry-card {
+      background: var(--cream); border-radius: 4px; padding: 38px 30px;
+      border: 1px solid var(--cream-deep); transition: all 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .ministry-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--brown-light));
+    }
+    .ministry-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; top: 0;
+      background: linear-gradient(160deg, var(--emerald) 0%, var(--emerald-dark) 100%);
+      opacity: 0; transition: opacity 0.3s; border-radius: 4px;
+    }
+    .ministry-card:hover::after { opacity: 1; }
+    .ministry-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(15,45,34,0.18); }
+    .ministry-card:hover h3, .ministry-card:hover p { color: white; position: relative; z-index: 1; }
+    .ministry-card:hover .ministry-icon { filter: grayscale(0) brightness(1.4); position: relative; z-index: 1; }
+    .ministry-icon { font-size: 32px; margin-bottom: 18px; transition: all 0.3s; }
+    .ministry-card h3 { font-size: 20px; color: var(--emerald); margin-bottom: 10px; font-style: italic; font-weight: 600; transition: color 0.3s; }
+    .ministry-card p { font-size: 14px; color: var(--warm-gray); line-height: 1.68; transition: color 0.3s; }
+
+    /* PASTOR */
+    .pastor-bg { background: var(--brown); }
+    .pastor-bg .section-label { color: var(--gold-light); }
+    .pastor-bg .section-label::before { background: var(--gold-light); }
+    .pastor-bg .section-heading { color: var(--cream); }
+    .pastor-bg .gold-ornament::before,
+    .pastor-bg .gold-ornament::after { background: var(--gold-light); }
+    .pastor-bg .gold-ornament span { color: var(--gold-light); }
+    .pastor-img img { width: 100%; height: 540px; object-fit: cover; border-radius: 4px; }
+    .pastor-text p { font-size: 16px; color: rgba(247,240,227,0.82); line-height: 1.88; margin-bottom: 22px; }
+
+    /* QUOTE PULL */
+    .pull-quote {
+      border-left: 3px solid var(--gold-light);
+      padding: 14px 24px; margin: 24px 0;
+      background: rgba(255,255,255,0.06); border-radius: 0 4px 4px 0;
+    }
+    .pull-quote p { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-style: italic; color: var(--gold-light) !important; margin: 0 !important; line-height: 1.5 !important; }
+
+    /* SERVICE TIMES */
+    .service-bg {
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(201,153,63,0.1) 0%, transparent 60%),
+        linear-gradient(160deg, var(--emerald-dark) 0%, var(--emerald) 100%);
+      text-align: center;
+    }
+    .service-bg .section-label { justify-content: center; color: var(--gold-light); }
+    .service-bg .section-label::before { background: var(--gold-light); }
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 760px; margin: 0 auto 48px; }
+    .service-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,153,63,0.4); border-radius: 4px; padding: 44px 36px;
+    }
+    .service-card .icon { font-size: 28px; margin-bottom: 16px; }
+    .service-card h3 { color: var(--gold-light); font-size: 24px; margin-bottom: 10px; font-style: italic; }
+    .service-card p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.72; }
+    .service-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+
+    /* TESTIMONIES */
+    .testimony-bg { background: var(--cream); }
+    .testimony-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .testimony-card {
+      background: white; border-radius: 4px; padding: 44px 36px;
+      border: 1px solid var(--cream-deep); position: relative;
+      box-shadow: 0 6px 28px rgba(0,0,0,0.05);
+    }
+    .testimony-card::before {
+      content: '\201C'; position: absolute; top: 18px; left: 28px;
+      font-size: 100px; color: var(--gold); opacity: 0.15;
+      font-family: 'Cormorant Garamond', serif; line-height: 1;
+    }
+    .stars { color: var(--gold); font-size: 13px; margin-bottom: 14px; letter-spacing: 3px; }
+    .testimony-card blockquote { font-size: 15px; color: #4A3E30; line-height: 1.78; margin-bottom: 24px; font-style: italic; font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+    .testimony-name { font-weight: 700; color: var(--emerald); font-size: 14px; font-family: 'Nunito', sans-serif; }
+    .testimony-loc { font-size: 12px; color: var(--warm-gray); font-weight: 400; font-family: 'Nunito', sans-serif; margin-top: 2px; }
+
+    /* LOCATION */
+    .location-bg { background: var(--cream-dark); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 72px; align-items: start; }
+    .location-info h3 { font-size: 24px; color: var(--emerald); margin-bottom: 10px; font-style: italic; }
+    .location-info p { font-size: 15px; color: var(--warm-gray); line-height: 1.72; margin-bottom: 22px; }
+    .neighborhood-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .tag {
+      background: var(--emerald); color: rgba(255,255,255,0.9);
+      padding: 5px 16px; border-radius: 2px; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .map-placeholder {
+      border-radius: 4px; height: 380px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; font-family: 'Nunito', sans-serif;
+      background: linear-gradient(135deg, #c8d8cc 0%, #aec4b4 100%);
+      border: 1px solid rgba(26,77,58,0.2);
+    }
+    .map-placeholder .map-pin { font-size: 44px; }
+    .map-placeholder p { font-size: 15px; font-weight: 700; color: var(--emerald-dark); }
+    .map-placeholder span { font-size: 13px; color: var(--emerald-mid); }
+
+    /* FINAL CTA */
+    .final-cta-bg {
+      background:
+        radial-gradient(ellipse at center top, rgba(201,153,63,0.12) 0%, transparent 55%),
+        linear-gradient(180deg, var(--emerald-dark) 0%, #081a12 100%);
+      text-align: center; padding: 128px 52px;
+      position: relative; overflow: hidden;
+    }
+    .cta-bg-text {
+      position: absolute; font-family: 'Cormorant Garamond', serif;
+      font-size: 220px; font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+      white-space: nowrap; pointer-events: none; letter-spacing: -5px;
+    }
+    .final-cta-bg .section-label { justify-content: center; color: var(--gold-light); }
+    .final-cta-bg .section-label::before { background: var(--gold-light); }
+    .final-cta-bg h2 { color: white; font-size: clamp(38px, 5.5vw, 64px); margin-bottom: 24px; line-height: 1.1; font-style: italic; }
+    .final-cta-bg h2 em { font-style: normal; color: var(--gold-light); }
+    .final-cta-bg p { color: rgba(255,255,255,0.65); font-size: 18px; line-height: 1.78; max-width: 520px; margin: 0 auto 52px; }
+    .final-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .final-cta-bg .btn-gold { font-size: 14px; padding: 18px 44px; }
+
+    /* FOOTER */
+    footer { background: #060f09; padding: 72px 52px 32px; color: rgba(255,255,255,0.55); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top {
+      display: grid; grid-template-columns: 1.7fr 1fr 1fr; gap: 64px;
+      margin-bottom: 56px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(201,153,63,0.15);
+    }
+    .footer-brand h3 { color: white; font-size: 22px; margin-bottom: 4px; font-weight: 600; font-style: italic; }
+    .footer-brand .sub { display: block; color: var(--gold); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-family: 'Nunito', sans-serif; }
+    .footer-brand p { font-size: 14px; line-height: 1.78; }
+    .footer-col h4 { color: var(--gold); font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px; font-family: 'Nunito', sans-serif; font-weight: 700; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; font-size: 14px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+    .footer-copy { text-align: center; font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.5px; }
+
+    /* CENTERED HELPERS */
+    .centered { text-align: center; }
+    .centered .section-label { justify-content: center; }
+    .centered .section-label::before { display: none; }
+    .centered .section-sub { margin: 0 auto 52px; }
+    .centered .gold-ornament { justify-content: center; margin-bottom: 40px; }
+
+    /* DIVIDER ORNAMENT */
+    .divider-ornament {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+      padding: 0 52px; margin: 0;
+    }
+    .divider-ornament::before, .divider-ornament::after {
+      content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-pale), transparent);
+    }
+    .divider-ornament span { color: var(--gold); font-size: 14px; letter-spacing: 3px; white-space: nowrap; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    La Sinagoga Juan 3:16
+    <span>Iglesia Pentecostal · Brooklyn, NY</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#">Quiénes Somos</a></li>
+    <li><a href="#">Ministerios</a></li>
+    <li><a href="#">Servicios</a></li>
+    <li><a href="#">Cómo Llegar</a></li>
+  </ul>
+  <a href="#" class="btn-gold">Visítanos Este Domingo</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-ornament">✦</div>
+  <div class="hero-content">
+    <div class="eyebrow">
+      <span class="eyebrow-line"></span>
+      Iglesia Pentecostal en Brooklyn, Nueva York
+    </div>
+    <h1>Aquí Encontrarás<br>un <em>Hogar Espiritual</em></h1>
+    <p>La Sinagoga Juan 3:16 es una iglesia pentecostal en East New York, Brooklyn, donde familias hispanas encuentran adoración genuina, comunidad real, y la presencia de Dios cada domingo.</p>
+    <div class="hero-ctas">
+      <a href="#" class="btn-gold">Visítanos Este Domingo</a>
+      <a href="#" class="btn-outline-white">Ver Transmisión en Vivo</a>
+    </div>
+  </div>
+  <div class="hero-verse">"Porque de tal manera amó Dios al mundo..." — Juan 3:16</div>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item">Iglesia Pentecostal Hispana</div>
+  <div class="trust-item">East New York, Brooklyn</div>
+  <div class="trust-item">Servicios en Español</div>
+  <div class="trust-item">Bienvenidos los Domingos</div>
+  <div class="trust-item">Pastor Angel Diaz</div>
+</div>
+
+<!-- ABOUT -->
+<div class="about-bg">
+  <div class="section-wrap">
+    <div class="two-col">
+      <div class="about-text">
+        <div class="section-label">Quiénes Somos</div>
+        <h2 class="section-heading">Una Iglesia Donde<br>Todos Son Bienvenidos</h2>
+        <div class="gold-ornament"><span>✦</span></div>
+        <p>La Sinagoga Juan 3:16 nació con una visión simple y poderosa: ser un lugar donde la Palabra de Dios se predica con claridad, donde el Espíritu Santo es bienvenido, y donde ninguna persona tiene que enfrentar la vida sola.</p>
+        <p>Somos una congregación pentecostal hispana ubicada en el corazón de Brooklyn. Creemos en la adoración sin límites, en la oración que mueve montañas, y en una comunidad que cuida a los suyos.</p>
+        <p>Si estás buscando una iglesia en Brooklyn donde te sientas en casa desde el primer día, las puertas de La Sinagoga Juan 3:16 están abiertas para ti y tu familia.</p>
+        <a href="#" class="btn-gold" style="margin-top: 14px;">Visítanos Este Domingo</a>
+      </div>
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?w=800&q=80" alt="Congregación en adoración" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM / SOLUTION -->
+<div class="ps-bg">
+  <div class="section-wrap">
+    <div class="section-label" style="color: var(--gold-light);">Para los que están buscando</div>
+    <h2 class="section-heading section-heading-light" style="max-width: 700px;">¿Nunca Has Visitado Una Iglesia Antes?<br><em style="color: var(--gold-light);">No Hay Problema.</em></h2>
+    <div class="ps-grid">
+      <div class="ps-card problem">
+        <h3>Lo que muchos sienten</h3>
+        <p>Muchas personas quieren buscar a Dios pero no saben por dónde empezar. Sienten que no encajan, que no conocen a nadie, o que tienen que tener todo resuelto antes de entrar.</p>
+      </div>
+      <div class="ps-card solution">
+        <h3>Lo que encontrarás aquí</h3>
+        <p>En La Sinagoga Juan 3:16 no necesitas tener todas las respuestas. Llegas como eres. Te recibiremos con respeto, sin presión, y con las puertas abiertas. La única cosa que necesitas traer es un corazón dispuesto.</p>
+      </div>
+    </div>
+    <div style="text-align: center;">
+      <a href="#" class="btn-gold" style="font-size: 14px; padding: 17px 42px;">Visítanos Este Domingo</a>
+    </div>
+  </div>
+</div>
+
+<!-- MINISTRIES -->
+<div class="ministry-bg">
+  <div class="section-wrap centered">
+    <div class="section-label">Lo que ofrecemos</div>
+    <h2 class="section-heading">Ministerios Para<br>Toda la Familia</h2>
+    <div class="gold-ornament"><span>✦</span></div>
+    <p class="section-sub">Un lugar donde cada miembro de tu familia puede crecer en fe, comunidad, y propósito.</p>
+    <div class="ministry-grid">
+      <div class="ministry-card">
+        <div class="ministry-icon">🙏</div>
+        <h3>Culto General</h3>
+        <p>Servicio dominical con adoración, oración, y predicación de la Palabra. El corazón de nuestra congregación.</p>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">⭐</div>
+        <h3>Ministerio de Niños</h3>
+        <p>Un espacio seguro y divertido para que los niños crezcan en la fe desde temprana edad.</p>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🔥</div>
+        <h3>Ministerio de Jóvenes</h3>
+        <p>Actividades, discipulado, y comunidad para la próxima generación. Fe que conecta con la vida real.</p>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🌸</div>
+        <h3>Ministerio de Damas</h3>
+        <p>Un grupo de mujeres que se apoyan mutuamente, oran juntas, y crecen en Cristo cada semana.</p>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">🛡️</div>
+        <h3>Ministerio de Caballeros</h3>
+        <p>Hombres que se reúnen para crecer en fe, responsabilidad, y carácter bajo los principios de la Palabra.</p>
+      </div>
+      <div class="ministry-card">
+        <div class="ministry-icon">📺</div>
+        <h3>Transmisión en Vivo</h3>
+        <p>Únete a nuestros servicios desde donde estés, todos los domingos. La Palabra llega a donde tú estás.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PASTOR -->
+<div class="pastor-bg">
+  <div class="section-wrap">
+    <div class="two-col-rev">
+      <div class="pastor-img">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80" alt="Pastor Angel Diaz — Placeholder" />
+      </div>
+      <div class="pastor-text">
+        <div class="section-label" style="color:var(--gold-light);">Liderazgo</div>
+        <h2 class="section-heading" style="color: var(--cream);">Conoce a<br><em style="color: var(--gold-light);">Nuestro Pastor</em></h2>
+        <div class="gold-ornament" style="margin-bottom: 32px;">
+          <span style="color: var(--gold-light);">✦</span>
+        </div>
+        <p>El Pastor Angel Diaz y su esposa Andera llevan el ministerio de La Sinagoga Juan 3:16 con un corazón de servicio y una visión clara: ver vidas transformadas por el poder del Evangelio.</p>
+        <div class="pull-quote">
+          <p>"Predico la Palabra sin compromiso y pastoreo a cada persona con dedicación."</p>
+        </div>
+        <p>Si tienes preguntas, necesitas oración, o simplemente quieres conocernos antes de visitar, escríbenos. Estamos aquí para ti.</p>
+        <a href="#" class="btn-gold" style="margin-top: 14px;">Contáctanos</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE TIMES -->
+<div class="service-bg">
+  <div class="section-wrap centered">
+    <div class="section-label">Horario</div>
+    <h2 class="section-heading section-heading-light">Únete a <em style="color: var(--gold-light);">Nosotros</em></h2>
+    <p style="color: rgba(255,255,255,0.65); font-size: 17px; max-width: 500px; margin: 0 auto 52px; line-height: 1.72;">En persona o desde donde estás, siempre hay un lugar para ti en La Sinagoga Juan 3:16.</p>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="icon">⛪</div>
+        <h3>Servicio Dominical</h3>
+        <p><strong style="color: white;">Domingos</strong> · Hora por confirmar<br><br>247 Snediker Avenue<br>Brooklyn, NY 11207</p>
+      </div>
+      <div class="service-card">
+        <div class="icon">📡</div>
+        <h3>Transmisión en Vivo</h3>
+        <p>Síguenos todos los domingos en transmisión en vivo. La Palabra de Dios llega a donde tú estás.</p>
+      </div>
+    </div>
+    <div class="service-ctas">
+      <a href="#" class="btn-gold" style="padding: 15px 32px;">Ver Transmisión en Vivo</a>
+      <a href="#" class="btn-outline-gold" style="padding: 15px 32px;">Cómo Llegar</a>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIES -->
+<div class="testimony-bg">
+  <div class="section-wrap centered">
+    <div class="section-label">Testimonios</div>
+    <h2 class="section-heading">Lo Que Dicen<br>Nuestros Hermanos</h2>
+    <div class="gold-ornament"><span>✦</span></div>
+    <p class="section-sub">Vidas reales transformadas por la Palabra de Dios en nuestra congregación.</p>
+    <div class="testimony-grid">
+      <div class="testimony-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Desde el primer domingo me sentí como en casa. El pastor predica con fuego y la congregación te recibe con amor genuino."</blockquote>
+        <div class="testimony-name">Maria R.</div>
+        <div class="testimony-loc">Brooklyn, NY</div>
+      </div>
+      <div class="testimony-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Vine buscando algo real y lo encontré aquí. La Sinagoga Juan 3:16 cambió mi vida y la de mi familia para siempre."</blockquote>
+        <div class="testimony-name">Carlos M.</div>
+        <div class="testimony-loc">East New York</div>
+      </div>
+      <div class="testimony-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Una iglesia de verdad. Adoración poderosa, Palabra sin compromiso, y una familia espiritual que cuida a los suyos."</blockquote>
+        <div class="testimony-name">Rosa T.</div>
+        <div class="testimony-loc">Cypress Hills</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LOCATION -->
+<div class="location-bg">
+  <div class="section-wrap">
+    <div class="location-grid">
+      <div class="location-info">
+        <div class="section-label">Encuéntranos</div>
+        <h2 class="section-heading">Estamos en el Corazón<br>de Brooklyn</h2>
+        <div class="gold-ornament"><span>✦</span></div>
+        <h3>La Sinagoga Juan 3:16</h3>
+        <p>247 Snediker Avenue<br>Brooklyn, NY 11207</p>
+        <p>Servimos a familias de:</p>
+        <div class="neighborhood-tags">
+          <span class="tag">East New York</span>
+          <span class="tag">Cypress Hills</span>
+          <span class="tag">Brownsville</span>
+          <span class="tag">Bushwick</span>
+          <span class="tag">Canarsie</span>
+          <span class="tag">East Flatbush</span>
+        </div>
+        <a href="#" class="btn-gold">Obtener Direcciones</a>
+      </div>
+      <div class="map-placeholder">
+        <div class="map-pin">📍</div>
+        <p>247 Snediker Ave, Brooklyn NY 11207</p>
+        <span>Google Map se integrará aquí</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final-cta-bg">
+  <div class="cta-bg-text">Jn 3:16</div>
+  <div class="section-label">Te Esperamos</div>
+  <h2>Da el Primer Paso.<br><em>Visítanos Este Domingo.</em></h2>
+  <p>No importa de dónde vengas ni lo que hayas vivido. En La Sinagoga Juan 3:16 encontrarás una comunidad que te recibe con amor.</p>
+  <div class="final-ctas">
+    <a href="#" class="btn-gold">Visítanos Este Domingo</a>
+    <a href="#" class="btn-outline-gold">Escríbenos</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>La Sinagoga Juan 3:16</h3>
+        <span class="sub">Iglesia Pentecostal · Brooklyn, NY</span>
+        <p>Una congregación hispana en East New York, Brooklyn, donde la Palabra de Dios se predica con claridad y todos son bienvenidos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Páginas</h4>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Quiénes Somos</a></li>
+          <li><a href="#">Ministerios</a></li>
+          <li><a href="#">Nuestro Pastor</a></li>
+          <li><a href="#">Cómo Llegar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li>247 Snediker Avenue</li>
+          <li>Brooklyn, NY 11207</li>
+          <li><a href="#">Teléfono por confirmar</a></li>
+          <li><a href="#">Servicios: Domingos</a></li>
+          <li><a href="#">Transmisión en Vivo</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 La Sinagoga Juan 3:16 · Brooklyn, New York · Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>
